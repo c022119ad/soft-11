@@ -11,7 +11,7 @@ PurchasePointPayment(final Customer customer, final Comic comic) {
  if (comic.isDisabled()) {
    throw new IllegalArgumentException("現在取り扱いできないコミックです。")
  }
- if (customer.possessionPoint.amount < customer.possessionPoint.amount) {
+ if (customer.isShortOfPoint(comic)) {
    throw new IllegalArugumntException("所持ポイントが不足しています")
  }
  customerId=customer.id;
